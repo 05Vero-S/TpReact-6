@@ -1,9 +1,9 @@
 import { Button } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-const ItemColor = () => {
+const ItemColor = ({nombreColor}) => {
     return (
-        <ListGroup.Item className='d-flex justify-content-between'>Nombre color <Button variant='danger'>Borrar</Button>  </ListGroup.Item>
+        <ListGroup.Item className='d-flex justify-content-between'> {nombreColor} <Button variant='danger'>Borrar</Button>  </ListGroup.Item>
     );
 };
 

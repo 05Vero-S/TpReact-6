@@ -40,7 +40,7 @@ const FormularioColor = () => {
         </Card.Body>
         
       </Card>
-      <ListaColores />
+      <ListaColores arrayColores={colores} />
     </section>
   );
 };

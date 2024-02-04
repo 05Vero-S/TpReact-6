@@ -1,11 +1,13 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import ItemColor from './ItemColor';
 
-const ListaColores = () => {
+const ListaColores = ({arrayColores}) => {
     return (
         
-    <ListGroup>
-      <ItemColor></ItemColor>
+    <ListGroup> {
+        arrayColores.map((color, posicionColor)=><ItemColor key={posicionColor} nombreColor={color} ></ItemColor>)
+        }
+      
     </ListGroup>
        
     );
