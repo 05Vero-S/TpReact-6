@@ -11,7 +11,7 @@ const FormularioColor = () => {
       <Form >
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label >Color</Form.Label>
-        <Form.Control type="text" placeholder="Ingrese un color ej. Blue" />
+        <Form.Control type="text" placeholder="Ingrese un color ej. Blue" minLength={2} maxLength={20}/>
       </Form.Group>
       
     </Form>
