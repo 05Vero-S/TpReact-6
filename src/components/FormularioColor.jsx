@@ -6,12 +6,22 @@ import { useState } from "react";
 
 const FormularioColor = () => {
   const [color, setColor] = useState("");
+  const [colores, setColores] = useState([]);
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+
+    setColores([...colores, color]);
+    setColor("");
+  }
+
+
   return (
     <section>
       <Card className="my-4">
         <Card.Header>Administrar colores</Card.Header>
         <Card.Body className="bg-secondary">
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Color</Form.Label>
               <Form.Control
@@ -23,11 +33,12 @@ const FormularioColor = () => {
                 value={color}
               />
             </Form.Group>
-          </Form>
-        </Card.Body>
-        <Button variant="info" type="submit">
+            <Button variant="info" type="submit">
           Guardar
         </Button>
+          </Form>
+        </Card.Body>
+        
       </Card>
       <ListaColores />
     </section>
