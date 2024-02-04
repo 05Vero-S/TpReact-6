@@ -2,11 +2,17 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import ListaColores from "./ListaColores";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const FormularioColor = () => {
   const [color, setColor] = useState("");
+  const coloresLocalStorage = JSON.parse(localStorage.getItem("coloresKey")) || []
   const [colores, setColores] = useState([]);
+
+  useEffect(()=>{
+    localStorage.setItem("coloresKey", JSON.stringify(colores));
+
+  }, [colores])
 
   const handleSubmit = (e) =>{
     e.preventDefault();
