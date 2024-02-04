@@ -1,11 +1,12 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
+import ListaColores from './ListaColores';
 
 const FormularioColor = () => {
     return (
         <section>
-            <Card >
+            <Card className='my-4'>
       <Card.Header>Administrar colores</Card.Header>
       <Card.Body className='bg-secondary'>
       <Form >
@@ -19,6 +20,7 @@ const FormularioColor = () => {
       </Card.Body>
       <Button variant="info" type='submit'>Guardar</Button>
     </Card>
+    <ListaColores/>
             
         </section>
     );
